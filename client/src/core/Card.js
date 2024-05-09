@@ -176,7 +176,6 @@ const Card = ({
               {showStock(product.quantity)}
               <br></br>
               <span>
-                {showViewButton(showViewProductButton)}
                 {showAddToCartBtn(showAddToCartButton)}
                 {showRemoveButton(showRemoveProductButton)}
               </span>
