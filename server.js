@@ -19,7 +19,7 @@ const app = express();
 const connectDB = async () => {
   try {
     await mongoose.connect(
-      process.env.MONGODB_URI,
+      "mongodb+srv://yc2457:7VOkAynCUuCeQY9Z@cluster-0.rhnzkmj.mongodb.net/",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -49,16 +49,15 @@ app.use('/api', userRoutes);
 app.use('/api', categoryRoutes);
 app.use('/api', productRoutes);
 
-if (process.env.NODE_ENV === 'production') {
-  // Set static folder
-  app.use(express.static('client/build'));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "client/build/index.html"), function (err) {
+      if (err) {
+          res.status(500).send(err);
+      }
   });
-}
+});
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
