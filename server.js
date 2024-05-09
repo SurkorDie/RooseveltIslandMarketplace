@@ -49,13 +49,8 @@ app.use('/api', userRoutes);
 app.use('/api', categoryRoutes);
 app.use('/api', productRoutes);
 
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, "client/build/index.html"), function (err) {
-      if (err) {
-          res.status(500).send(err);
-      }
-  });
-});
+// Have Node serve the files for our built React app
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 const PORT = process.env.PORT || 5000;
 
