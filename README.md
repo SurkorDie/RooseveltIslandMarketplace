@@ -5,9 +5,7 @@
 > Database-> MongoDB
 
 ## Installation process
-1. #### clone the repo using this command
-    ```bash
-    ```
+1. #### clone the repo 
 2. #### install npm packages
     1. install backend packages
     ```bash
