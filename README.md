@@ -1,5 +1,3 @@
-# mern-ecommerce
-
 > Frontend-> React JS
 
 > Backend-> Node JS & Express JS
@@ -72,6 +70,3 @@
     6. admin can create, edit, update & delete products
     7. admin can create categories
     9. admin can change the status of a product (processing, shipped, delivered, etc.)
-
-6. <b>Deployed on: (No longer available due to heroku free dyno plan has deprecated)</br> https://ecommerce-ak.herokuapp.com/ 
-7. raise a star to support me
